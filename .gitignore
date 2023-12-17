@@ -35,6 +35,7 @@ egs/svc/dev_exp_config.json
 bins/svc/demo*
 bins/svc/preprocess_custom.py
 data
+ckpts
 
 # Data and ckpt
 *.pkl
