@@ -3,3 +3,4 @@ git+https://github.com/lhotse-speech/lhotse
 encodec
 phonemizer==3.2.1
 pypinyin==0.48.0
+nltk
