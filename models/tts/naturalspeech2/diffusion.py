@@ -3,6 +3,7 @@ import torch.nn as nn
 import numpy as np
 import torch.nn.functional as F
 from models.tts.naturalspeech2.wavenet import WaveNet
+from tqdm import  tqdm
 
 
 class Diffusion(nn.Module):
@@ -80,7 +81,7 @@ class Diffusion(nn.Module):
     def reverse_diffusion(self, z, x_mask, cond, n_timesteps, spk_query_emb):
         h = 1.0 / max(n_timesteps, 1)
         xt = z
-        for i in range(n_timesteps):
+        for i in tqdm(range(n_timesteps)):
             t = (1.0 - (i + 0.5) * h) * torch.ones(
                 z.shape[0], dtype=z.dtype, device=z.device
             )
@@ -102,7 +103,7 @@ class Diffusion(nn.Module):
     ):
         h = t_start / max(n_timesteps, 1)
         xt = z
-        for i in range(n_timesteps):
+        for i in tqdm(range(n_timesteps)):
             t = (t_start - (i + 0.5) * h) * torch.ones(
                 z.shape[0], dtype=z.dtype, device=z.device
             )
