@@ -1,6 +1,6 @@
 ---
 title: NaturalSpeech2
-emoji: 📉
+emoji: 🎧
 colorFrom: gray
 colorTo: pink
 sdk: gradio
