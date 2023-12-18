@@ -46,6 +46,7 @@ def ns2_inference(
         nltk.download('cmudict')
     except:
         pass
+
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     os.environ["WORK_DIR"] = "./"
