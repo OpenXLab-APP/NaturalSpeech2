@@ -16,6 +16,9 @@ from text.g2p import preprocess_english, read_lexicon
 
 import torchaudio
 
+from openxlab.model import download
+download(model_repo='Amphion/NaturalSpeech2', model_name='pytorch_model', output='ckpts/ns2')
+
 
 def build_codec(device):
     encodec_model = EncodecModel.encodec_model_24khz()
