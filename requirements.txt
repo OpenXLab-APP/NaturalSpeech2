@@ -1,4 +1,4 @@
-gradio==4.10.0
+gradio==3.36.1
 fairseq
 git+https://github.com/lhotse-speech/lhotse
 encodec
